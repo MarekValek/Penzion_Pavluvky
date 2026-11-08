@@ -6,74 +6,92 @@
     <title>Penzion Pavlůvky</title>
     <link rel="icon" type="image/png" href="images/penzionpavluvky1.png">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#E31B23">
+    <meta name="theme-color" content="#722F37">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { bfcRed: '#E31B23', bfcDark: '#121316', bfcCard: '#1C1E22', bfcBorder: '#2E3238' } } } }
+        tailwind.config = { 
+            darkMode: 'class', 
+            theme: { 
+                extend: { 
+                    colors: { 
+                        wineDark: '#1E0F12',      // Hlavní tmavé pozadí s vínovým podtónem
+                        wineCard: '#2D161B',      // Pozadí karet a sekcí
+                        wineBorder: '#4A232B',    // Ochranné linky a rámečky
+                        winePrimary: '#722F37',   // Vínová / Burgundská
+                        wineBright: '#9E2A3B',    // Jasnější vínová pro zvýraznění
+                        wineHover: '#5B232B',     // Tmavší vínová na hover
+                        cream: '#F7EBE8'          // Krémová barva pro texty
+                    } 
+                } 
+            } 
+        }
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-bfcDark text-gray-100 min-h-screen flex flex-col">
-    <header class="sticky top-0 z-50 bg-bfcDark/95 border-b border-bfcBorder">
+<body class="bg-wineDark text-gray-200 min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 bg-wineDark/95 border-b border-wineBorder backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             <!-- Logo a název -->
             <a href="index.html" class="flex items-center space-x-3">
-                <img src="images/penzionpavluvky.png" alt="penzionpavluvky" class="w-10 h-10 rounded-xl object-cover border border-penzionpavluvkyPurple/40 bg-bfcPurple/10 p-1">
-                <span class="text-xl font-black text-white">Penzion <span class="text-bfcRed inline-block transition transform duration-300 hover:-rotate-12">Pavlůvky</span></span>
+                <img src="images/penzionpavluvky.png" alt="Penzion Pavlůvky" class="w-10 h-10 rounded-xl object-cover border border-wineBright/40 bg-winePrimary/20 p-1">
+                <span class="text-xl font-black text-cream">Penzion <span class="text-wineBright inline-block transition transform duration-300 hover:-rotate-6">Pavlůvky</span></span>
             </a>
 
-            <!-- Menu pro počítače -->
+            <!-- Navigace pro PC -->
             <nav class="hidden md:flex space-x-2 text-sm font-semibold">
-                <a href="index.html" class="px-3 py-2 bg-bfcRed text-white rounded-lg">Hlavní strana</a>
-                <a href="propozice.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Propozice</a>
-                <a href="haly.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Haly</a>
-                <a href="rozpisy.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Rozpisy</a>
-                <a href="statistiky.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Statistiky</a>
-                <a href="tymy.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Týmy</a>
-                <a href="kontakt.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Kontakt</a>
-                <a href="bfc-tym.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">BFC Tým</a>
-                <a href="trener/trener.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Trenér</a>
-                <a href="poradatel/poradatel.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Pořadatel</a>
-                <a href="admin/admin.html" class="px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Admin</a>
+                <a href="index.html" class="px-3 py-2 bg-wineBright text-white rounded-lg transition hover:bg-wineHover">Hlavní strana</a>
+                <a href="ubytovani.html" class="px-3 py-2 text-gray-300 hover:bg-wineCard rounded-lg transition">Pokoje a ceník</a>
+                <a href="fotogalerie.html" class="px-3 py-2 text-gray-300 hover:bg-wineCard rounded-lg transition">Fotogalerie</a>
+                <a href="okolik.html" class="px-3 py-2 text-gray-300 hover:bg-wineCard rounded-lg transition">Tipy na výlety</a>
+                <a href="kontakt.html" class="px-3 py-2 text-gray-300 hover:bg-wineCard rounded-lg transition">Kontakt</a>
+                <a href="rezervace.html" class="px-4 py-2 border border-wineBright text-wineBright hover:bg-wineBright hover:text-white rounded-lg transition ml-2">Rezervovat</a>
             </nav>
 
-            <!-- Tlačítko hamburger menu pro mobily -->
-            <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-bfcCard border border-bfcRed/40 text-white hover:bg-bfcRed/20 hover:border-bfcRed group transition duration-300">
-                <i data-lucide="menu" class="w-6 h-6 text-bfcRed group-hover:rotate-90 transition duration-300"></i>
+            <!-- Mobilní tlačítko -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-wineCard border border-wineBorder text-cream hover:bg-winePrimary/20 transition">
+                <i data-lucide="menu" class="w-6 h-6 text-wineBright"></i>
             </button>
         </div>
 
-        <!-- Rozbalovací mobilní menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-4 py-4 bg-bfcCard border-b border-bfcBorder space-y-2 text-sm font-semibold">
-            <a href="index.html" class="block px-3 py-2 bg-bfcRed text-white rounded-lg">Hlavní strana</a>
-            <a href="propozice.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcDark rounded-lg">Propozice</a>
-            <a href="haly.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcDark rounded-lg">Haly</a>
-            <a href="rozpisy.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcDark rounded-lg">Rozpisy</a>
-            <a href="statistiky.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcDark rounded-lg">Statistiky</a>
-            <a href="tymy.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">Týmy</a>
-            <a href="kontakt.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcDark rounded-lg">Kontakt</a>
-            <a href="bfc-tym.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcCard rounded-lg">BFC Tým</a>
-            <a href="trener/trener.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcDark rounded-lg">Trenér</a>
-            <a href="poradatel/poradatel.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcDark rounded-lg">Pořadatel</a>
-            <a href="admin/admin.html" class="block px-3 py-2 text-gray-300 hover:bg-bfcDark rounded-lg">Admin</a>
+        <!-- Mobilní menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 py-4 bg-wineCard border-b border-wineBorder space-y-2 text-sm font-semibold">
+            <a href="index.html" class="block px-3 py-2 bg-wineBright text-white rounded-lg">Hlavní strana</a>
+            <a href="ubytovani.html" class="block px-3 py-2 text-gray-300 hover:bg-wineDark rounded-lg">Pokoje a ceník</a>
+            <a href="fotogalerie.html" class="block px-3 py-2 text-gray-300 hover:bg-wineDark rounded-lg">Fotogalerie</a>
+            <a href="okolik.html" class="block px-3 py-2 text-gray-300 hover:bg-wineDark rounded-lg">Tipy na výlety</a>
+            <a href="kontakt.html" class="block px-3 py-2 text-gray-300 hover:bg-wineDark rounded-lg">Kontakt</a>
+            <a href="rezervace.html" class="block px-3 py-2 text-wineBright font-bold hover:bg-wineDark rounded-lg">Rezervovat pobyt</a>
         </div>
     </header>
 
     <main class="flex-grow max-w-7xl mx-auto px-4 py-8 w-full space-y-12">
         
-        <!-- Banner s obrázkem na pozadí -->
-        <div class="relative overflow-hidden border border-bfcBorder rounded-3xl p-8 md:p-12 space-y-6 bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(28, 30, 34, 0.95), rgba(28, 30, 34, 0.6)), url('images/BFC/BFC-Banner.png');">
-            <span class="px-3 py-1 rounded-full bg-bfcRed/10 border border-bfcRed/30 text-bfcRed text-xs font-bold uppercase relative z-10">Odpočiňte si v srdci přírody – Penzion Pavlůvky</span>
-            <h1 class="text-4xl md:text-6xl font-black text-white relative z-10">Penzion<span class="text-bfcRed inline-block transform -rotate-6">Pavlůvky</span></h1>
-            <p class="text-gray-300 max-w-2xl relative z-10">Útulné rodinné ubytování pro turistiky, rodiny i ty, kteří hledají klid a pohodu.</p>
-            <div class="flex flex-wrap gap-4 relative z-10">
-                <a href="rozpisy.html" class="px-6 py-3 rounded-xl bg-bfcRed text-white font-bold hover:bg-red-700 transition shadow-lg">Rezervovat pobyt</a>
-                <a href="registrace.html" class="px-6 py-3 rounded-xl bg-bfcCard/80 backdrop-blur border border-bfcBorder font-bold text-white hover:bg-bfcBorder transition">Prohlédnout pokoje</a>
+        <!-- Banner s vínovým nádechem -->
+        <div class="relative overflow-hidden border border-wineBorder rounded-3xl p-8 md:p-12 space-y-6 bg-cover bg-center shadow-2xl" style="background-image: linear-gradient(to right, rgba(30, 15, 18, 0.95), rgba(30, 15, 18, 0.6)), url('images/banner.png');">
+            <span class="inline-block px-3 py-1 rounded-full bg-wineBright/20 border border-wineBright/40 text-wineBright text-xs font-bold uppercase tracking-wider relative z-10">
+                Odpočiňte si v srdci přírody – Penzion Pavlůvky
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black text-cream relative z-10 tracking-tight">
+                Penzion <span class="text-wineBright inline-block transform -rotate-2">Pavlůvky</span>
+            </h1>
+            <p class="text-gray-300 max-w-2xl relative z-10 text-lg leading-relaxed">
+                Útulné rodinné ubytování pro turisty, rodiny i všechny, kteří hledají klid, Pohodu a skvělé víno.
+            </p>
+            <div class="flex flex-wrap gap-4 relative z-10 pt-2">
+                <a href="rezervace.html" class="px-6 py-3 rounded-xl bg-wineBright text-white font-bold hover:bg-wineHover transition shadow-lg shadow-wineBright/30">
+                    Rezervovat pobyt
+                </a>
+                <a href="ubytovani.html" class="px-6 py-3 rounded-xl bg-wineCard/80 backdrop-blur border border-wineBorder font-bold text-cream hover:bg-wineBorder transition">
+                    Prohlédnout pokoje
+                </a>
             </div>
         </div>
+
     </main>
   
-    <footer class="border-t border-bfcBorder py-6 text-center text-xs text-gray-500">&copy; 2026 Penzion Pavlůvkyp</footer>
+    <footer class="border-t border-wineBorder py-6 text-center text-xs text-gray-400">
+        &copy; 2026 Penzion Pavlůvky. Všechna práva vyhrazena.
+    </footer>
 
     <script>
         function toggleMobileMenu() {
