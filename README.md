@@ -1,2 +1,2 @@
-# Penzion_Pavluvky
+# Penzion Pavlůvky
 Web pro penzion
