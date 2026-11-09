@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penzion Pavlůvky - Rezervace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        wineDark: '#170A0C',
+                        wineCard: '#271115',
+                        wineBorder: '#421C22',
+                        winePrimary: '#6E2530',
+                        wineBright: '#A3283B',
+                        wineHover: '#541B23',
+                        cream: '#F9F1EF'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-wineDark text-gray-200 min-h-screen flex flex-col font-sans">
+    <!-- NAVIGACE -->
+    <header class="bg-wineDark/95 border-b border-wineBorder backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <span class="text-xl font-black text-cream">Penzion <span class="text-wineBright">Pavlůvky</span></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-2 text-sm font-semibold">
+                <a href="index.html" class="px-3 py-2 text-gray-300 hover:text-white">Hlavní strana</a>
+                <a href="onas.html" class="px-3 py-2 text-gray-300 hover:text-white">O nás</a>
+                <a href="pokoje.html" class="px-3 py-2 text-gray-300 hover:text-white">Pokoje</a>
+                <a href="sluzby.html" class="px-3 py-2 text-gray-300 hover:text-white">Služby</a>
+                <a href="vylety.html" class="px-3 py-2 text-gray-300 hover:text-white">Tipy na výlety</a>
+                <a href="kontakt.html" class="px-3 py-2 text-gray-300 hover:text-white">Kontakt</a>
+                <a href="rezervace.html" class="px-4 py-2 bg-wineBright text-white rounded-lg">Rezervovat</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- OBSAH STRÁNKY -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 w-full space-y-12">
+
+                        <section class="space-y-8">
+                            <div class="border-b border-wineBorder pb-6">
+                                <h1 class="text-3xl md:text-5xl font-black text-cream">Rezervace pobytu</h1>
+                                <p class="text-gray-400 mt-2">Ověřte si dostupnost termínu a pošlete nám nezávaznou poptávku</p>
+                            </div>
+
+                            <div class="bg-wineCard border border-wineBorder rounded-3xl p-8 md:p-12 space-y-6 shadow-2xl">
+                                <form onsubmit="event.preventDefault(); alert('Děkujeme za vaši poptávku! Brzy vás budeme kontaktovat.');" class="max-w-3xl mx-auto space-y-6">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Jméno a příjmení *</label>
+                                            <input type="text" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="Jan Novák">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Telefonní číslo *</label>
+                                            <input type="tel" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="+420 777 123 456">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-300 mb-1">E-mailová adresa *</label>
+                                            <input type="email" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="jan.novak@email.cz">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Vyberte pokoj *</label>
+                                            <select class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition">
+                                                <option>Dvoulůžkový pokoj Standard</option>
+                                                <option>Rodinné Apartmá</option>
+                                                <option>Třílůžkový Pokoj</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Datum příjezdu *</label>
+                                            <input type="date" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Datum odjezdu *</label>
+                                            <input type="date" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Počet dospělých / dětí</label>
+                                            <input type="text" class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="např. 2 dospělí, 1 dítě">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-semibold text-gray-300 mb-1">Poznámka / Speciální přání</label>
+                                        <textarea rows="4" class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="Zájem o večerní degustaci vína, dětskou postýlku..."></textarea>
+                                    </div>
+
+                                    <button type="submit" class="w-full py-4 rounded-xl bg-wineBright text-white font-bold hover:bg-wineHover transition shadow-xl shadow-wineBright/30 text-sm">
+                                        Odeslat poptávku pobytu
+                                    </button>
+                                </form>
+                            </div>
+                        </section>
+                    
+    </main>
+
+    <!-- ZÁPATÍ -->
+    <footer class="border-t border-wineBorder py-8 text-center text-xs text-gray-500">
+        &copy; 2026 Penzion Pavlůvky. Všechna práva vyhrazena.
+    </footer>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
