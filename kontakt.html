@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cs" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penzion Pavlůvky - Tipy na výlety</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        wineDark: '#170A0C',
+                        wineCard: '#271115',
+                        wineBorder: '#421C22',
+                        winePrimary: '#6E2530',
+                        wineBright: '#A3283B',
+                        wineHover: '#541B23',
+                        cream: '#F9F1EF'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-wineDark text-gray-200 min-h-screen flex flex-col font-sans">
+    <!-- NAVIGACE -->
+    <header class="bg-wineDark/95 border-b border-wineBorder backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <span class="text-xl font-black text-cream">Penzion <span class="text-wineBright">Pavlůvky</span></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-2 text-sm font-semibold">
+                <a href="index.html" class="px-3 py-2 text-gray-300 hover:text-white">Hlavní strana</a>
+                <a href="onas.html" class="px-3 py-2 text-gray-300 hover:text-white">O nás</a>
+                <a href="pokoje.html" class="px-3 py-2 text-gray-300 hover:text-white">Pokoje</a>
+                <a href="sluzby.html" class="px-3 py-2 text-gray-300 hover:text-white">Služby</a>
+                <a href="vylety.html" class="px-3 py-2 text-gray-300 hover:text-white">Tipy na výlety</a>
+                <a href="kontakt.html" class="px-3 py-2 text-gray-300 hover:text-white">Kontakt</a>
+                <a href="rezervace.html" class="px-4 py-2 bg-wineBright text-white rounded-lg">Rezervovat</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- OBSAH STRÁNKY -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 w-full space-y-12">
+
+                        <section class="space-y-8">
+                            <div class="border-b border-wineBorder pb-6">
+                                <h1 class="text-3xl md:text-5xl font-black text-cream">Tipy na výlety</h1>
+                                <p class="text-gray-400 mt-2">Kam se vydat v okolí Penzionu Pavlůvky</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="bg-wineCard border border-wineBorder rounded-3xl p-6 space-y-4 shadow-xl hover:border-wineBright transition">
+                                    <div class="w-10 h-10 rounded-xl bg-wineBright/20 flex items-center justify-center text-wineBright">
+                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-cream">Vinařské cyklostezky</h3>
+                                    <p class="text-xs text-gray-300 leading-relaxed">Propletené trasy mezi vinicemi s minimálním provozem aut. Vhodné pro rodiny i zdatné cyklisty.</p>
+                                </div>
+                                <div class="bg-wineCard border border-wineBorder rounded-3xl p-6 space-y-4 shadow-xl hover:border-wineBright transition">
+                                    <div class="w-10 h-10 rounded-xl bg-wineBright/20 flex items-center justify-center text-wineBright">
+                                        <i data-lucide="castle" class="w-5 h-5"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-cream">Zámky a památky</h3>
+                                    <p class="text-xs text-gray-300 leading-relaxed">V dosahu 15 minut jízdy se nachází historické hrady, rozhledny a kulturní památky UNESCO.</p>
+                                </div>
+                                <div class="bg-wineCard border border-wineBorder rounded-3xl p-6 space-y-4 shadow-xl hover:border-wineBright transition">
+                                    <div class="w-10 h-10 rounded-xl bg-wineBright/20 flex items-center justify-center text-wineBright">
+                                        <i data-lucide="waves" class="w-5 h-5"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-cream">Koupání a Aquapark</h3>
+                                    <p class="text-xs text-gray-400 leading-relaxed">V letních měsících oceníte blízkou vodní nádrž i vyhlášené termální koupaliště v regionu.</p>
+                                </div>
+                            </div>
+                        </section>
+                    
+    </main>
+
+    <!-- ZÁPATÍ -->
+    <footer class="border-t border-wineBorder py-8 text-center text-xs text-gray-500">
+        &copy; 2026 Penzion Pavlůvky. Všechna práva vyhrazena.
+    </footer>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
