@@ -1,5 +1,5 @@
 const penzionInfo = {
-    telefon: "+420 777 888 999",
+    telefon: "+420 602 490 962",
     email: "info@penzionpavluvky.cz",
     adresa: "V údolí 18, Velké Pavlovice, 691 06",
     instagram: "https://instagram.com/penzionpavluvky"
