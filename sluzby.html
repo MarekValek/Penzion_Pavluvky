@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penzion Pavlůvky - Pokoje & Ceník</title>
+    <title>Penzion Pavlůvky - Služby</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,10 +36,10 @@
                 <a href="index.html" class="px-3 py-2 text-gray-300 hover:text-white">Hlavní strana</a>
                 <a href="onas.html" class="px-3 py-2 text-gray-300 hover:text-white">O nás</a>
                 <a href="pokoje.html" class="px-3 py-2 text-gray-300 hover:text-white">Pokoje</a>
-                <a href="sluzby.html" class="px-4 py-2 bg-wineBright text-white rounded-lg">Služby</a>
+                <a href="sluzby.html" class="px-3 py-2 text-gray-300 hover:text-white">Služby</a>
                 <a href="vylety.html" class="px-3 py-2 text-gray-300 hover:text-white">Tipy na výlety</a>
                 <a href="kontakt.html" class="px-3 py-2 text-gray-300 hover:text-white">Kontakt</a>
-                <a href="rezervace.html" class="px-3 py-2 text-gray-300 hover:text-white">Rezervovat</a>
+                <a href="rezervace.html" class="px-4 py-2 bg-wineBright text-white rounded-lg">Rezervovat</a>
             </nav>
         </div>
     </header>
@@ -49,69 +49,41 @@
 
                         <section class="space-y-8">
                             <div class="border-b border-wineBorder pb-6">
-                                <h1 class="text-3xl md:text-5xl font-black text-cream">Pokoje & Ceník</h1>
-                                <p class="text-gray-400 mt-2">Komfortní a čisté ubytování pro jednotlivce, páry i rodiny</p>
+                                <h1 class="text-3xl md:text-5xl font-black text-cream">Služby & Vybavení</h1>
+                                <p class="text-gray-400 mt-2">Vše pro váš maximální komfort během pobytu</p>
                             </div>
 
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <!-- Pokoj 1 -->
-                                <div class="bg-wineCard border border-wineBorder rounded-3xl overflow-hidden hover:border-wineBright transition duration-300 shadow-xl flex flex-col justify-between">
-                                    <div>
-                                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Dvoulůžkový pokoj">
-                                        <div class="p-6 space-y-3">
-                                            <h3 class="text-xl font-bold text-cream">Dvoulůžkový Standard</h3>
-                                            <p class="text-xs text-gray-300">Manželská postel, vlastní koupelna se sprchou, TV, Wi-Fi, minibar.</p>
-                                            <ul class="text-xs text-gray-400 space-y-1 pt-2">
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Vlastní koupelna a WC</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Rychlá Wi-Fi v ceně</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Výhled do zahrady</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="p-6 pt-0 flex items-center justify-between border-t border-wineBorder/50 mt-4">
-                                        <span class="text-xl font-bold text-wineBright">1 400 Kč <span class="text-xs text-gray-400 font-normal">/ noc</span></span>
-                                        <button onclick="loadPage('rezervace')" class="px-4 py-2 bg-wineBright text-white font-bold rounded-xl text-xs hover:bg-wineHover transition">Rezervovat</button>
-                                    </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                                <div class="bg-wineCard border border-wineBorder p-6 rounded-3xl text-center space-y-3 shadow-xl">
+                                    <i data-lucide="coffee" class="w-8 h-8 text-wineBright mx-auto"></i>
+                                    <h3 class="font-bold text-cream">Bohaté snídaně</h3>
+                                    <p class="text-xs text-gray-400">Podáváme formou švédských stolů z čerstvých lokálních surovin.</p>
                                 </div>
-
-                                <!-- Pokoj 2 -->
-                                <div class="bg-wineCard border border-wineBright rounded-3xl overflow-hidden shadow-2xl relative flex flex-col justify-between">
-                                    <span class="absolute top-4 right-4 bg-wineBright text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10 shadow">Oblíbené</span>
-                                    <div>
-                                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Rodinné apartmá">
-                                        <div class="p-6 space-y-3">
-                                            <h3 class="text-xl font-bold text-cream">Rodinné Apartmá</h3>
-                                            <p class="text-xs text-gray-300">Dvoupokojové apartmá s plně vybaveným kuchyňským koutem a balkónem.</p>
-                                            <ul class="text-xs text-gray-400 space-y-1 pt-2">
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Až 5 lůžek (2 oddělené pokoje)</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Kuchyňka (lednice, varná deska)</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Soukromá terasa</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="p-6 pt-0 flex items-center justify-between border-t border-wineBorder/50 mt-4">
-                                        <span class="text-xl font-bold text-wineBright">2 400 Kč <span class="text-xs text-gray-400 font-normal">/ noc</span></span>
-                                        <button onclick="loadPage('rezervace')" class="px-4 py-2 bg-wineBright text-white font-bold rounded-xl text-xs hover:bg-wineHover transition">Rezervovat</button>
-                                    </div>
+                                <div class="bg-wineCard border border-wineBorder p-6 rounded-3xl text-center space-y-3 shadow-xl">
+                                    <i data-lucide="wifi" class="w-8 h-8 text-wineBright mx-auto"></i>
+                                    <h3 class="font-bold text-cream">Wi-Fi Internet</h3>
+                                    <p class="text-xs text-gray-400">Rychlé bezdrátové připojení v celém objektu i v altánu zdarma.</p>
                                 </div>
+                                <div class="bg-wineCard border border-wineBorder p-6 rounded-3xl text-center space-y-3 shadow-xl">
+                                    <i data-lucide="shield-check" class="w-8 h-8 text-wineBright mx-auto"></i>
+                                    <h3 class="font-bold text-cream">Úschovna kol</h3>
+                                    <p class="text-xs text-gray-400">Uzamykatelná garáž na bicykly včetně dobíjení elektrokol.</p>
+                                </div>
+                                <div class="bg-wineCard border border-wineBorder p-6 rounded-3xl text-center space-y-3 shadow-xl">
+                                    <i data-lucide="car" class="w-8 h-8 text-wineBright mx-auto"></i>
+                                    <h3 class="font-bold text-cream">Parkování u objektu</h3>
+                                    <p class="text-xs text-gray-400">Bezplatné parkovací stání přímo před penzionem chráněné kamerou.</p>
+                                </div>
+                            </div>
 
-                                <!-- Pokoj 3 -->
-                                <div class="bg-wineCard border border-wineBorder rounded-3xl overflow-hidden hover:border-wineBright transition duration-300 shadow-xl flex flex-col justify-between">
-                                    <div>
-                                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Třílůžkový pokoj">
-                                        <div class="p-6 space-y-3">
-                                            <h3 class="text-xl font-bold text-cream">Třílůžkový Pokoj</h3>
-                                            <p class="text-xs text-gray-300">Pohodlný pokoj se třemi pevnými lůžky, psacím stolem a moderní koupelnou.</p>
-                                            <ul class="text-xs text-gray-400 space-y-1 pt-2">
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> 3 samostatné postele / dvoulůžko+jednolůžko</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Koupelna a Wi-Fi</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Lednička na pokoji</li>
-                                            </ul>
-                                        </div>
+                            <div class="bg-wineCard border border-wineBorder p-8 rounded-3xl space-y-4 shadow-xl">
+                                <h3 class="text-xl font-bold text-cream">Doplňkové služby na přání</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-300">
+                                    <div class="flex items-center gap-2 p-3 bg-wineDark/50 rounded-xl border border-wineBorder">
+                                        <i data-lucide="flame" class="w-4 h-4 text-wineBright"></i> Zapůjčení grilu a příprava dřeva na oheň
                                     </div>
-                                    <div class="p-6 pt-0 flex items-center justify-between border-t border-wineBorder/50 mt-4">
-                                        <span class="text-xl font-bold text-wineBright">1 800 Kč <span class="text-xs text-gray-400 font-normal">/ noc</span></span>
-                                        <button onclick="loadPage('rezervace')" class="px-4 py-2 bg-wineBright text-white font-bold rounded-xl text-xs hover:bg-wineHover transition">Rezervovat</button>
+                                    <div class="flex items-center gap-2 p-3 bg-wineDark/50 rounded-xl border border-wineBorder">
+                                        <i data-lucide="baby" class="w-4 h-4 text-wineBright"></i> Dětská postýlka a jídelní stolička zdarma
                                     </div>
                                 </div>
                             </div>
