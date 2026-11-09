@@ -1,249 +1,54 @@
 <!DOCTYPE html>
-<html lang="cs" class="dark scroll-smooth">
+<html lang="cs" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penzion Pavlůvky - Luxusní ubytování & Moravské vinařství</title>
-    <link rel="icon" type="image/png" href="images/penzionpavluvky1.png">
+    <title>Penzion Pavlůvky - Hlavní strana</title>
+    <link rel="icon" type="image/png" href="images/penzionpavluvky1.png"> 
     <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { 
-            darkMode: 'class', 
-            theme: { 
-                extend: { 
-                    colors: { 
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
                         wineDark: '#170A0C',
                         wineCard: '#271115',
                         wineBorder: '#421C22',
                         winePrimary: '#6E2530',
                         wineBright: '#A3283B',
                         wineHover: '#541B23',
-                        wineAccent: '#C93B52',
-                        cream: '#F9F1EF',
-                        gold: '#D4AF37'
-                    } 
-                } 
-            } 
+                        cream: '#F9F1EF'
+                    }
+                }
+            }
         }
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .glass-panel {
-            background: rgba(39, 17, 21, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(66, 28, 34, 0.8);
-        }
-        .wine-gradient {
-            background: linear-gradient(135deg, #170A0C 0%, #271115 50%, #421C22 100%);
-        }
-    </style>
 </head>
-<body class="bg-wineDark text-gray-200 min-h-screen flex flex-col font-sans selection:bg-wineBright selection:text-white">
-
-    <!-- DEMO PAGE SWITCHER TOOLBAR -->
-    <div class="bg-wineDark border-b border-wineBright/40 sticky top-0 z-50 text-xs py-2 px-4 shadow-2xl">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center space-x-2 text-wineBright font-bold">
-                <i data-lucide="layers" class="w-4 h-4"></i>
-                <span>NÁHLED STRÁNEK A KÓDŮ (PROHLÍŽEČ SUB-STRÁNEK):</span>
-            </div>
-            <div class="flex flex-wrap items-center gap-1.5" id="page-tabs">
-                <!-- JavaScript generated tabs for index.html, onas.html, pokoje.html, sluzby.html, vylety.html, kontakt.html, rezervace.html -->
-            </div>
-            <button onclick="toggleCodeModal()" class="flex items-center gap-1.5 px-3 py-1 bg-wineBright text-white font-bold rounded-lg hover:bg-wineHover transition shadow">
-                <i data-lucide="code" class="w-3.5 h-3.5"></i>
-                <span>Zobrazit kód této stránky</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- MAIN HEADER / NAVIGATION -->
-    <header class="bg-wineDark/90 border-b border-wineBorder backdrop-blur-md sticky top-[41px] z-40 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="javascript:void(0)" onclick="loadPage('index')" class="flex items-center space-x-3 group">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-wineBright to-wineDark p-0.5 border border-wineBright/50 shadow-lg group-hover:scale-105 transition-transform duration-300">
-                    <div class="w-full h-full bg-wineDark rounded-[14px] flex items-center justify-center">
-                        <i data-lucide="wine" class="w-6 h-6 text-wineBright group-hover:rotate-12 transition-transform duration-300"></i>
-                    </div>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-black text-cream tracking-tight leading-none">Penzion <span class="text-wineBright">Pavlůvky</span></span>
-                    <span class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Ubytování & Vinařství</span>
-                </div>
+<body class="bg-wineDark text-gray-200 min-h-screen flex flex-col font-sans">
+    <!-- NAVIGACE -->
+    <header class="bg-wineDark/95 border-b border-wineBorder backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3">
+                <span class="text-xl font-black text-cream">Penzion <span class="text-wineBright">Pavlůvky</span></span>
             </a>
-
-            <!-- Desktop Menu -->
-            <nav class="hidden lg:flex items-center space-x-1 text-sm font-medium" id="main-nav">
-                <!-- Nav Links injected by JS for reactive preview -->
+            <nav class="hidden md:flex items-center space-x-2 text-sm font-semibold">
+                <a href="index.html" class="px-3 py-2 text-gray-300 hover:text-white">Hlavní strana</a>
+                <a href="onas.html" class="px-3 py-2 text-gray-300 hover:text-white">O nás</a>
+                <a href="pokoje.html" class="px-3 py-2 text-gray-300 hover:text-white">Pokoje</a>
+                <a href="sluzby.html" class="px-3 py-2 text-gray-300 hover:text-white">Služby</a>
+                <a href="vylety.html" class="px-3 py-2 text-gray-300 hover:text-white">Tipy na výlety</a>
+                <a href="kontakt.html" class="px-3 py-2 text-gray-300 hover:text-white">Kontakt</a>
+                <a href="rezervace.html" class="px-4 py-2 bg-wineBright text-white rounded-lg">Rezervovat</a>
             </nav>
-
-            <!-- Mobile Hamburger Button -->
-            <button onclick="toggleMobileNav()" class="lg:hidden p-2.5 rounded-xl bg-wineCard border border-wineBorder text-cream hover:bg-winePrimary/30 transition">
-                <i data-lucide="menu" class="w-6 h-6 text-wineBright"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-nav" class="hidden lg:hidden px-4 py-4 bg-wineCard border-b border-wineBorder space-y-2 text-sm font-semibold">
-            <!-- Mobile Links injected by JS -->
         </div>
     </header>
 
-    <!-- CONTENT VIEWPORT -->
-    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 py-8 w-full space-y-12" id="page-container">
-        <!-- Rendered Page Content Injected Dynamically -->
-    </main>
+    <!-- OBSAH STRÁNKY -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 w-full space-y-12">
 
-    <!-- FOOTER -->
-    <footer class="border-t border-wineBorder bg-wineDark py-12 text-gray-400 text-sm mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div class="space-y-4">
-                <div class="flex items-center space-x-2">
-                    <i data-lucide="wine" class="w-5 h-5 text-wineBright"></i>
-                    <span class="text-lg font-bold text-cream">Penzion Pavlůvky</span>
-                </div>
-                <p class="text-xs text-gray-400 leading-relaxed">
-                    Rodinné ubytování v malebném prostředí jižní Moravy s vlastním vinným sklípkem a atmosférou klidu.
-                </p>
-            </div>
-            <div>
-                <h4 class="text-cream font-bold mb-3 text-sm">Rychlé odkazy</h4>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="javascript:void(0)" onclick="loadPage('onas')" class="hover:text-wineBright transition">O nás & Vinařství</a></li>
-                    <li><a href="javascript:void(0)" onclick="loadPage('pokoje')" class="hover:text-wineBright transition">Pokoje & Ceník</a></li>
-                    <li><a href="javascript:void(0)" onclick="loadPage('sluzby')" class="hover:text-wineBright transition">Služby & Vybavení</a></li>
-                    <li><a href="javascript:void(0)" onclick="loadPage('vylety')" class="hover:text-wineBright transition">Tipy na výlety</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-cream font-bold mb-3 text-sm">Kontakt</h4>
-                <ul class="space-y-2 text-xs">
-                    <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-wineBright"></i> Pavlůvky 123, 691 00 Morava</li>
-                    <li class="flex items-center gap-2"><i data-lucide="phone" class="w-3.5 h-3.5 text-wineBright"></i> +420 777 888 999</li>
-                    <li class="flex items-center gap-2"><i data-lucide="mail" class="w-3.5 h-3.5 text-wineBright"></i> info@penzionpavluvky.cz</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-cream font-bold mb-3 text-sm">Rezervace & Dotazy</h4>
-                <p class="text-xs text-gray-400 mb-3">Těšíme se na vaši návštěvu. Rezervujte si svůj termín včas.</p>
-                <button onclick="loadPage('rezervace')" class="w-full py-2.5 rounded-xl bg-wineBright text-white font-bold text-xs hover:bg-wineHover transition shadow-lg shadow-wineBright/20">
-                    Rezervovat pobyt
-                </button>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-6 border-t border-wineBorder flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-            <p>&copy; 2026 Penzion Pavlůvky. Všechna práva vyhrazena.</p>
-            <div class="flex space-x-4">
-                <span class="hover:text-gray-400 cursor-pointer">Ochrana osobních údajů</span>
-                <span>•</span>
-                <span class="hover:text-gray-400 cursor-pointer">Storno podmínky</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- CODE VIEW MODAL -->
-    <div id="code-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-wineCard border border-wineBorder rounded-3xl w-full max-w-4xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl">
-            <div class="p-4 bg-wineDark border-b border-wineBorder flex items-center justify-between">
-                <div class="flex items-center space-x-2 text-cream font-bold">
-                    <i data-lucide="file-code" class="w-5 h-5 text-wineBright"></i>
-                    <span id="modal-filename">index.html</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <button onclick="copyCurrentCode()" class="px-3 py-1.5 bg-wineBright text-white text-xs font-bold rounded-lg hover:bg-wineHover transition flex items-center gap-1.5">
-                        <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                        <span>Zkopírovat kód</span>
-                    </button>
-                    <button onclick="toggleCodeModal()" class="p-1.5 text-gray-400 hover:text-white rounded-lg hover:bg-wineBorder transition">
-                        <i data-lucide="x" class="w-5 h-5"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="p-4 overflow-y-auto flex-grow bg-wineDark font-mono text-xs text-gray-300">
-                <pre id="code-output" class="whitespace-pre-wrap break-all"></pre>
-            </div>
-        </div>
-    </div>
-
-    <!-- SCRIPT LOGIC FOR PREVIEW AND MULTI-PAGE MANAGEMENT -->
-    <script>
-        const pages = [
-            { id: 'index', name: 'index.html', label: 'Hlavní strana' },
-            { id: 'onas', name: 'onas.html', label: 'O nás & Vinařství' },
-            { id: 'pokoje', name: 'pokoje.html', label: 'Pokoje & Ceník' },
-            { id: 'sluzby', name: 'sluzby.html', label: 'Služby' },
-            { id: 'vylety', name: 'vylety.html', label: 'Tipy na výlety' },
-            { id: 'kontakt', name: 'kontakt.html', label: 'Kontakt' },
-            { id: 'rezervace', name: 'rezervace.html', label: 'Rezervace' }
-        ];
-
-        let currentPageId = 'index';
-
-        function renderTabs() {
-            const container = document.getElementById('page-tabs');
-            container.innerHTML = pages.map(p => `
-                <button onclick="loadPage('${p.id}')" class="px-2.5 py-1 rounded-md font-mono transition text-xs ${currentPageId === p.id ? 'bg-wineBright text-white font-bold shadow' : 'bg-wineCard text-gray-300 border border-wineBorder hover:bg-wineBorder'}">
-                    ${p.name}
-                </button>
-            `).join('');
-
-            const mainNav = document.getElementById('main-nav');
-            mainNav.innerHTML = pages.map(p => `
-                <a href="javascript:void(0)" onclick="loadPage('${p.id}')" class="px-3.5 py-2 rounded-xl transition font-medium ${currentPageId === p.id ? 'bg-wineBright text-white font-bold shadow-md shadow-wineBright/20' : 'text-gray-300 hover:bg-wineCard hover:text-white'}">
-                    ${p.label}
-                </a>
-            `).join('');
-
-            const mobileNav = document.getElementById('mobile-nav');
-            mobileNav.innerHTML = pages.map(p => `
-                <a href="javascript:void(0)" onclick="loadPage('${p.id}'); toggleMobileNav();" class="block px-4 py-2.5 rounded-xl transition ${currentPageId === p.id ? 'bg-wineBright text-white font-bold' : 'text-gray-300 hover:bg-wineDark'}">
-                    ${p.label} <span class="text-xs opacity-60">(${p.name})</span>
-                </a>
-            `).join('');
-        }
-
-        function loadPage(pageId) {
-            currentPageId = pageId;
-            renderTabs();
-            const container = document.getElementById('page-container');
-            container.innerHTML = getPageContent(pageId);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            lucide.createIcons();
-        }
-
-        function toggleMobileNav() {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        }
-
-        function toggleCodeModal() {
-            const modal = document.getElementById('code-modal');
-            const output = document.getElementById('code-output');
-            const filename = document.getElementById('modal-filename');
-            
-            const currentPage = pages.find(p => p.id === currentPageId);
-            filename.textContent = currentPage.name;
-
-            if (modal.classList.contains('hidden')) {
-                output.textContent = getFullPageHtml(currentPageId);
-                modal.classList.remove('hidden');
-            } else {
-                modal.classList.add('hidden');
-            }
-        }
-
-        function copyCurrentCode() {
-            const codeText = document.getElementById('code-output').textContent;
-            navigator.clipboard.writeText(codeText);
-            alert('Kód pro ' + currentPageId + '.html byl úspěšně zkopírován do schránky!');
-        }
-
-        function getPageContent(id) {
-            switch(id) {
-                case 'index':
-                    return `
                         <!-- Hero Section -->
                         <section class="relative overflow-hidden border border-wineBorder rounded-3xl p-8 md:p-16 space-y-6 bg-cover bg-center shadow-2xl glass-panel" style="background-image: linear-gradient(to right, rgba(23, 10, 12, 0.95), rgba(39, 17, 21, 0.75)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1200&auto=format&fit=crop');">
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-wineBright/20 border border-wineBright/40 text-wineAccent text-xs font-bold uppercase tracking-wider relative z-10">
@@ -332,374 +137,13 @@
                                 </div>
                             </div>
                         </section>
-                    `;
-                case 'onas':
-                    return `
-                        <section class="space-y-8">
-                            <div class="border-b border-wineBorder pb-6">
-                                <h1 class="text-3xl md:text-5xl font-black text-cream">O nás & Vinný sklípek</h1>
-                                <p class="text-gray-400 mt-2">Příběh rodinného penzionu s tradicí pohostinnosti</p>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                                <div class="space-y-4 bg-wineCard border border-wineBorder p-8 rounded-3xl shadow-xl">
-                                    <h2 class="text-2xl font-bold text-cream">Vítá vás rodina Pavlůvkova</h2>
-                                    <p class="text-gray-300 leading-relaxed text-sm">
-                                        Náš penzion vznikl z lásky k Moravě, vínu a poctivé pohostinnosti. Chceme, aby se u nás každý host cítil jako doma a odvážel si nezaapomenutelné zážitky.
-                                    </p>
-                                    <p class="text-gray-300 leading-relaxed text-sm">
-                                        Penzion jsme postupně zrekonstruovali s důrazem na přírodní materiály, dřevo a zachování původního rázu moravského venkova s moderním komfortem.
-                                    </p>
-                                </div>
-                                <div class="rounded-3xl overflow-hidden border border-wineBorder shadow-2xl h-80">
-                                    <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover" alt="Vinařství">
-                                </div>
-                            </div>
-
-                            <div class="bg-wineCard border border-wineBorder p-8 rounded-3xl space-y-6 shadow-xl">
-                                <h2 class="text-2xl font-bold text-cream flex items-center gap-2">
-                                    <i data-lucide="wine" class="w-6 h-6 text-wineBright"></i> Tradiční vinný sklípek
-                                </h2>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-                                    <div class="p-4 bg-wineDark/60 rounded-2xl border border-wineBorder">
-                                        <h4 class="font-bold text-cream mb-1">Večerní degustace</h4>
-                                        <p class="text-gray-400 text-xs">Ochutnávka 8 až 12 vzorků našich i přátelských vín s odborným výkladem a občerstvením.</p>
-                                    </div>
-                                    <div class="p-4 bg-wineDark/60 rounded-2xl border border-wineBorder">
-                                        <h4 class="font-bold text-cream mb-1">Domácí studená kuchyně</h4>
-                                        <p class="text-gray-400 text-xs">K vínu podáváme moravské škvarkové pomazánky, uzené, sýry a čerstvý chléb.</p>
-                                    </div>
-                                    <div class="p-4 bg-wineDark/60 rounded-2xl border border-wineBorder">
-                                        <h4 class="font-bold text-cream mb-1">Nákup lahví domů</h4>
-                                        <p class="text-gray-400 text-xs">Možnost zakoupení láhví přímo ze sklepa za zvýhodněné ceny pro ubytované hosty.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    `;
-                case 'pokoje':
-                    return `
-                        <section class="space-y-8">
-                            <div class="border-b border-wineBorder pb-6">
-                                <h1 class="text-3xl md:text-5xl font-black text-cream">Pokoje & Ceník</h1>
-                                <p class="text-gray-400 mt-2">Komfortní a čisté ubytování pro jednotlivce, páry i rodiny</p>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <!-- Pokoj 1 -->
-                                <div class="bg-wineCard border border-wineBorder rounded-3xl overflow-hidden hover:border-wineBright transition duration-300 shadow-xl flex flex-col justify-between">
-                                    <div>
-                                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Dvoulůžkový pokoj">
-                                        <div class="p-6 space-y-3">
-                                            <h3 class="text-xl font-bold text-cream">Dvoulůžkový Standard</h3>
-                                            <p class="text-xs text-gray-300">Manželská postel, vlastní koupelna se sprchou, TV, Wi-Fi, minibar.</p>
-                                            <ul class="text-xs text-gray-400 space-y-1 pt-2">
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Vlastní koupelna a WC</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Rychlá Wi-Fi v ceně</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Výhled do zahrady</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="p-6 pt-0 flex items-center justify-between border-t border-wineBorder/50 mt-4">
-                                        <span class="text-xl font-bold text-wineBright">1 400 Kč <span class="text-xs text-gray-400 font-normal">/ noc</span></span>
-                                        <button onclick="loadPage('rezervace')" class="px-4 py-2 bg-wineBright text-white font-bold rounded-xl text-xs hover:bg-wineHover transition">Rezervovat</button>
-                                    </div>
-                                </div>
-
-                                <!-- Pokoj 2 -->
-                                <div class="bg-wineCard border border-wineBright rounded-3xl overflow-hidden shadow-2xl relative flex flex-col justify-between">
-                                    <span class="absolute top-4 right-4 bg-wineBright text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10 shadow">Oblíbené</span>
-                                    <div>
-                                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Rodinné apartmá">
-                                        <div class="p-6 space-y-3">
-                                            <h3 class="text-xl font-bold text-cream">Rodinné Apartmá</h3>
-                                            <p class="text-xs text-gray-300">Dvoupokojové apartmá s plně vybaveným kuchyňským koutem a balkónem.</p>
-                                            <ul class="text-xs text-gray-400 space-y-1 pt-2">
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Až 5 lůžek (2 oddělené pokoje)</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Kuchyňka (lednice, varná deska)</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Soukromá terasa</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="p-6 pt-0 flex items-center justify-between border-t border-wineBorder/50 mt-4">
-                                        <span class="text-xl font-bold text-wineBright">2 400 Kč <span class="text-xs text-gray-400 font-normal">/ noc</span></span>
-                                        <button onclick="loadPage('rezervace')" class="px-4 py-2 bg-wineBright text-white font-bold rounded-xl text-xs hover:bg-wineHover transition">Rezervovat</button>
-                                    </div>
-                                </div>
-
-                                <!-- Pokoj 3 -->
-                                <div class="bg-wineCard border border-wineBorder rounded-3xl overflow-hidden hover:border-wineBright transition duration-300 shadow-xl flex flex-col justify-between">
-                                    <div>
-                                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=600&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Třílůžkový pokoj">
-                                        <div class="p-6 space-y-3">
-                                            <h3 class="text-xl font-bold text-cream">Třílůžkový Pokoj</h3>
-                                            <p class="text-xs text-gray-300">Pohodlný pokoj se třemi pevnými lůžky, psacím stolem a moderní koupelnou.</p>
-                                            <ul class="text-xs text-gray-400 space-y-1 pt-2">
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> 3 samostatné postele / dvoulůžko+jednolůžko</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Koupelna a Wi-Fi</li>
-                                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-wineBright"></i> Lednička na pokoji</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="p-6 pt-0 flex items-center justify-between border-t border-wineBorder/50 mt-4">
-                                        <span class="text-xl font-bold text-wineBright">1 800 Kč <span class="text-xs text-gray-400 font-normal">/ noc</span></span>
-                                        <button onclick="loadPage('rezervace')" class="px-4 py-2 bg-wineBright text-white font-bold rounded-xl text-xs hover:bg-wineHover transition">Rezervovat</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    `;
-                case 'sluzby':
-                    return `
-                        <section class="space-y-8">
-                            <div class="border-b border-wineBorder pb-6">
-                                <h1 class="text-3xl md:text-5xl font-black text-cream">Služby & Vybavení</h1>
-                                <p class="text-gray-400 mt-2">Vše pro váš maximální komfort během pobytu</p>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                                <div class="bg-wineCard border border-wineBorder p-6 rounded-3xl text-center space-y-3 shadow-xl">
-                                    <i data-lucide="coffee" class="w-8 h-8 text-wineBright mx-auto"></i>
-                                    <h3 class="font-bold text-cream">Bohaté snídaně</h3>
-                                    <p class="text-xs text-gray-400">Podáváme formou švédských stolů z čerstvých lokálních surovin.</p>
-                                </div>
-                                <div class="bg-wineCard border border-wineBorder p-6 rounded-3xl text-center space-y-3 shadow-xl">
-                                    <i data-lucide="wifi" class="w-8 h-8 text-wineBright mx-auto"></i>
-                                    <h3 class="font-bold text-cream">Wi-Fi Internet</h3>
-                                    <p class="text-xs text-gray-400">Rychlé bezdrátové připojení v celém objektu i v altánu zdarma.</p>
-                                </div>
-                                <div class="bg-wineCard border border-wineBorder p-6 rounded-3xl text-center space-y-3 shadow-xl">
-                                    <i data-lucide="shield-check" class="w-8 h-8 text-wineBright mx-auto"></i>
-                                    <h3 class="font-bold text-cream">Úschovna kol</h3>
-                                    <p class="text-xs text-gray-400">Uzamykatelná garáž na bicykly včetně dobíjení elektrokol.</p>
-                                </div>
-                                <div class="bg-wineCard border border-wineBorder p-6 rounded-3xl text-center space-y-3 shadow-xl">
-                                    <i data-lucide="car" class="w-8 h-8 text-wineBright mx-auto"></i>
-                                    <h3 class="font-bold text-cream">Parkování u objektu</h3>
-                                    <p class="text-xs text-gray-400">Bezplatné parkovací stání přímo před penzionem chráněné kamerou.</p>
-                                </div>
-                            </div>
-
-                            <div class="bg-wineCard border border-wineBorder p-8 rounded-3xl space-y-4 shadow-xl">
-                                <h3 class="text-xl font-bold text-cream">Doplňkové služby na přání</h3>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-300">
-                                    <div class="flex items-center gap-2 p-3 bg-wineDark/50 rounded-xl border border-wineBorder">
-                                        <i data-lucide="flame" class="w-4 h-4 text-wineBright"></i> Zapůjčení grilu a příprava dřeva na oheň
-                                    </div>
-                                    <div class="flex items-center gap-2 p-3 bg-wineDark/50 rounded-xl border border-wineBorder">
-                                        <i data-lucide="baby" class="w-4 h-4 text-wineBright"></i> Dětská postýlka a jídelní stolička zdarma
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    `;
-                case 'vylety':
-                    return `
-                        <section class="space-y-8">
-                            <div class="border-b border-wineBorder pb-6">
-                                <h1 class="text-3xl md:text-5xl font-black text-cream">Tipy na výlety</h1>
-                                <p class="text-gray-400 mt-2">Kam se vydat v okolí Penzionu Pavlůvky</p>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div class="bg-wineCard border border-wineBorder rounded-3xl p-6 space-y-4 shadow-xl hover:border-wineBright transition">
-                                    <div class="w-10 h-10 rounded-xl bg-wineBright/20 flex items-center justify-center text-wineBright">
-                                        <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-cream">Vinařské cyklostezky</h3>
-                                    <p class="text-xs text-gray-300 leading-relaxed">Propletené trasy mezi vinicemi s minimálním provozem aut. Vhodné pro rodiny i zdatné cyklisty.</p>
-                                </div>
-                                <div class="bg-wineCard border border-wineBorder rounded-3xl p-6 space-y-4 shadow-xl hover:border-wineBright transition">
-                                    <div class="w-10 h-10 rounded-xl bg-wineBright/20 flex items-center justify-center text-wineBright">
-                                        <i data-lucide="castle" class="w-5 h-5"></i>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-cream">Zámky a památky</h3>
-                                    <p class="text-xs text-gray-300 leading-relaxed">V dosahu 15 minut jízdy se nachází historické hrady, rozhledny a kulturní památky UNESCO.</p>
-                                </div>
-                                <div class="bg-wineCard border border-wineBorder rounded-3xl p-6 space-y-4 shadow-xl hover:border-wineBright transition">
-                                    <div class="w-10 h-10 rounded-xl bg-wineBright/20 flex items-center justify-center text-wineBright">
-                                        <i data-lucide="waves" class="w-5 h-5"></i>
-                                    </div>
-                                    <h3 class="text-xl font-bold text-cream">Koupání a Aquapark</h3>
-                                    <p class="text-xs text-gray-400 leading-relaxed">V letních měsících oceníte blízkou vodní nádrž i vyhlášené termální koupaliště v regionu.</p>
-                                </div>
-                            </div>
-                        </section>
-                    `;
-                case 'kontakt':
-                    return `
-                        <section class="space-y-8">
-                            <div class="border-b border-wineBorder pb-6">
-                                <h1 class="text-3xl md:text-5xl font-black text-cream">Kontakt & Kde nás najdete</h1>
-                                <p class="text-gray-400 mt-2">Jsme tu pro vás. Neváhejte se ozvat s jakýmkoliv dotazem</p>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div class="bg-wineCard border border-wineBorder p-8 rounded-3xl space-y-6 shadow-xl">
-                                    <h2 class="text-2xl font-bold text-cream">Kontaktní údaje</h2>
-                                    <div class="space-y-4 text-sm text-gray-300">
-                                        <div class="flex items-start gap-3">
-                                            <i data-lucide="map-pin" class="w-5 h-5 text-wineBright mt-0.5"></i>
-                                            <div>
-                                                <strong class="block text-cream">Adresa penzionu:</strong>
-                                                Penzion Pavlůvky, Pavlůvky 123, 691 00 Morava
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start gap-3">
-                                            <i data-lucide="phone" class="w-5 h-5 text-wineBright mt-0.5"></i>
-                                            <div>
-                                                <strong class="block text-cream">Telefon:</strong>
-                                                +420 777 888 999 (Recepce 8:00 - 20:00)
-                                            </div>
-                                        </div>
-                                        <div class="flex items-start gap-3">
-                                            <i data-lucide="mail" class="w-5 h-5 text-wineBright mt-0.5"></i>
-                                            <div>
-                                                <strong class="block text-cream">E-mail:</strong>
-                                                info@penzionpavluvky.cz
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-wineCard border border-wineBorder p-8 rounded-3xl space-y-4 shadow-xl flex flex-col justify-center text-center">
-                                    <i data-lucide="navigation" class="w-12 h-12 text-wineBright mx-auto"></i>
-                                    <h3 class="text-xl font-bold text-cream">Navigace k penzionu</h3>
-                                    <p class="text-xs text-gray-400">Penzion se nachází na kraji obce Pavlůvky. Příjezd je možný pohodlně po zpevněné cestě s parkováním na pozemku.</p>
-                                </div>
-                            </div>
-                        </section>
-                    `;
-                case 'rezervace':
-                    return `
-                        <section class="space-y-8">
-                            <div class="border-b border-wineBorder pb-6">
-                                <h1 class="text-3xl md:text-5xl font-black text-cream">Rezervace pobytu</h1>
-                                <p class="text-gray-400 mt-2">Ověřte si dostupnost termínu a pošlete nám nezávaznou poptávku</p>
-                            </div>
-
-                            <div class="bg-wineCard border border-wineBorder rounded-3xl p-8 md:p-12 space-y-6 shadow-2xl">
-                                <form onsubmit="event.preventDefault(); alert('Děkujeme za vaši poptávku! Brzy vás budeme kontaktovat.');" class="max-w-3xl mx-auto space-y-6">
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <div>
-                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Jméno a příjmení *</label>
-                                            <input type="text" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="Jan Novák">
-                                        </div>
-                                        <div>
-                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Telefonní číslo *</label>
-                                            <input type="tel" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="+420 777 123 456">
-                                        </div>
-                                    </div>
-
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <div>
-                                            <label class="block text-xs font-semibold text-gray-300 mb-1">E-mailová adresa *</label>
-                                            <input type="email" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="jan.novak@email.cz">
-                                        </div>
-                                        <div>
-                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Vyberte pokoj *</label>
-                                            <select class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition">
-                                                <option>Dvoulůžkový pokoj Standard</option>
-                                                <option>Rodinné Apartmá</option>
-                                                <option>Třílůžkový Pokoj</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                        <div>
-                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Datum příjezdu *</label>
-                                            <input type="date" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition">
-                                        </div>
-                                        <div>
-                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Datum odjezdu *</label>
-                                            <input type="date" required class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition">
-                                        </div>
-                                        <div>
-                                            <label class="block text-xs font-semibold text-gray-300 mb-1">Počet dospělých / dětí</label>
-                                            <input type="text" class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="např. 2 dospělí, 1 dítě">
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label class="block text-xs font-semibold text-gray-300 mb-1">Poznámka / Speciální přání</label>
-                                        <textarea rows="4" class="w-full bg-wineDark border border-wineBorder rounded-xl p-3 text-cream text-sm focus:border-wineBright focus:outline-none transition" placeholder="Zájem o večerní degustaci vína, dětskou postýlku..."></textarea>
-                                    </div>
-
-                                    <button type="submit" class="w-full py-4 rounded-xl bg-wineBright text-white font-bold hover:bg-wineHover transition shadow-xl shadow-wineBright/30 text-sm">
-                                        Odeslat poptávku pobytu
-                                    </button>
-                                </form>
-                            </div>
-                        </section>
-                    `;
-            }
-        }
-
-        function getFullPageHtml(id) {
-            const pageObj = pages.find(p => p.id === id);
-            const content = getPageContent(id);
-            return `<!DOCTYPE html>
-<html lang="cs" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penzion Pavlůvky - ${pageObj.label}</title>
-    <script src="https://cdn.tailwindcss.com"><\/script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        wineDark: '#170A0C',
-                        wineCard: '#271115',
-                        wineBorder: '#421C22',
-                        winePrimary: '#6E2530',
-                        wineBright: '#A3283B',
-                        wineHover: '#541B23',
-                        cream: '#F9F1EF'
-                    }
-                }
-            }
-        }
-    <\/script>
-    <script src="https://unpkg.com/lucide@latest"><\/script>
-</head>
-<body class="bg-wineDark text-gray-200 min-h-screen flex flex-col font-sans">
-    <!-- NAVIGACE -->
-    <header class="bg-wineDark/95 border-b border-wineBorder backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-3">
-                <span class="text-xl font-black text-cream">Penzion <span class="text-wineBright">Pavlůvky</span></span>
-            </a>
-            <nav class="hidden md:flex items-center space-x-2 text-sm font-semibold">
-                <a href="index.html" class="px-3 py-2 text-gray-300 hover:text-white">Hlavní strana</a>
-                <a href="onas.html" class="px-3 py-2 text-gray-300 hover:text-white">O nás</a>
-                <a href="pokoje.html" class="px-3 py-2 text-gray-300 hover:text-white">Pokoje</a>
-                <a href="sluzby.html" class="px-3 py-2 text-gray-300 hover:text-white">Služby</a>
-                <a href="vylety.html" class="px-3 py-2 text-gray-300 hover:text-white">Tipy na výlety</a>
-                <a href="kontakt.html" class="px-3 py-2 text-gray-300 hover:text-white">Kontakt</a>
-                <a href="rezervace.html" class="px-4 py-2 bg-wineBright text-white rounded-lg">Rezervovat</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- OBSAH STRÁNKY -->
-    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 w-full space-y-12">
-${content}
+                    
     </main>
 
     <!-- ZÁPATÍ -->
     <footer class="border-t border-wineBorder py-8 text-center text-xs text-gray-500">
         &copy; 2026 Penzion Pavlůvky. Všechna práva vyhrazena.
     </footer>
-    <script>lucide.createIcons();<\/script>
-</body>
-</html>`;
-        }
-
-        window.onload = function() {
-            loadPage('index');
-        };
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
