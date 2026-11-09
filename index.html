@@ -183,9 +183,18 @@
             <div class="space-y-3">
                 <h4 class="text-sm font-bold text-cream uppercase tracking-wider">Kontakt</h4>
                 <ul class="space-y-2 text-xs text-gray-400">
-                    <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-wineBright"></i> Pavlůvky 123, 691 00 Morava</li>
-                    <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-wineBright"></i> +420 777 888 999</li>
-                    <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-wineBright"></i> info@penzionpavluvky.cz</li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-wineBright"></i> 
+                        <span id="adresa-text">Načítám...</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-wineBright"></i> 
+                        <a href="" id="tel-link" class="hover:text-white transition"><span id="tel-text">Načítám...</span></a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-wineBright"></i> 
+                        <a href="" id="email-link" class="hover:text-white transition"><span id="email-text">Načítám...</span></a>
+                    </li>
                 </ul>
             </div>
             <div class="space-y-4">
@@ -214,5 +223,6 @@
         }
         lucide.createIcons();
     </script>
+    <script src="js/kontakt.js"></script>
 </body>
 </html>
