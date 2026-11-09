@@ -36,6 +36,7 @@
                 <img src="images/penzionpavluvky.png" alt="Penzion Pavlůvky Logo" class="w-10 h-10 object-contain rounded-xl border border-wineBright/40 bg-winePrimary/20 p-1">
                 <span class="text-xl font-black text-cream">Penzion <span class="text-wineBright inline-block transition transform duration-300 hover:-rotate-12">Pavlůvky</span></span>
             </a>
+            
             <!-- Menu pro počítače -->
             <nav class="hidden md:flex items-center space-x-2 text-sm font-semibold">
                 <a href="index.html" class="px-4 py-2 bg-wineBright text-white rounded-lg">Hlavní strana</a>
@@ -46,27 +47,29 @@
                 <a href="kontakt.html" class="px-3 py-2 text-gray-300 hover:text-white transition">Kontakt</a>
                 <a href="rezervace.html" class="px-3 py-2 text-gray-300 hover:text-white transition">Rezervovat</a>
             </nav>
+
             <!-- Tlačítko hamburger menu pro mobily -->
-            <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-bfcCard border border-bfcRed/40 text-white hover:bg-bfcRed/20 hover:border-bfcRed group transition duration-300">
-                <i data-lucide="menu" class="w-6 h-6 text-bfcRed group-hover:rotate-90 transition duration-300"></i>
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-wineCard border border-wineBright/40 text-white hover:bg-wineBright/20 hover:border-wineBright group transition duration-300">
+                <i data-lucide="menu" class="w-6 h-6 text-wineBright group-hover:rotate-90 transition duration-300"></i>
             </button>
         </div>
-        <!-- Rozbalovací mobilní menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-4 py-4 bg-bfcCard border-b border-bfcBorder space-y-2 text-sm font-semibold">
+
+        <!-- Rozbalovací mobilní menu ve vínových barvách -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 py-4 bg-wineCard border-b border-wineBorder space-y-2 text-sm font-semibold">
             <a href="index.html" class="block px-4 py-2 bg-wineBright text-white rounded-lg">Hlavní strana</a>
-                <a href="onas.html" class="block px-3 py-2 text-gray-300 hover:text-white transition">O nás</a>
-                <a href="pokoje.html" class="block px-3 py-2 text-gray-300 hover:text-white transition">Pokoje</a>
-                <a href="sluzby.html" class="block px-3 py-2 text-gray-300 hover:text-white transition">Služby</a>
-                <a href="vylety.html" class="block px-3 py-2 text-gray-300 hover:text-white transition">Tipy na výlety</a>
-                <a href="kontakt.html" class="block px-3 py-2 text-gray-300 hover:text-white transition">Kontakt</a>
-                <a href="rezervace.html" class="block px-3 py-2 text-gray-300 hover:text-white transition">Rezervovat</a>
+            <a href="onas.html" class="block px-3 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-wineDark">O nás</a>
+            <a href="pokoje.html" class="block px-3 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-wineDark">Pokoje</a>
+            <a href="sluzby.html" class="block px-3 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-wineDark">Služby</a>
+            <a href="vylety.html" class="block px-3 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-wineDark">Tipy na výlety</a>
+            <a href="kontakt.html" class="block px-3 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-wineDark">Kontakt</a>
+            <a href="rezervace.html" class="block px-3 py-2 text-gray-300 hover:text-white transition rounded-lg hover:bg-wineDark">Rezervovat</a>
         </div>
     </header>
 
     <!-- OBSAH STRÁNKY -->
     <main class="flex-grow max-w-7xl mx-auto px-4 py-8 w-full space-y-12">
 
-        <!-- Hero Section (obrázek načítán z lokální složky images/) -->
+        <!-- Hero Section -->
         <section class="relative overflow-hidden border border-wineBorder rounded-3xl p-8 md:p-16 space-y-6 bg-cover bg-center shadow-2xl" style="background-image: linear-gradient(to right, rgba(23, 10, 12, 0.95), rgba(39, 17, 21, 0.75)), url('images/banner.png');">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-wineBright/20 border border-wineBright/40 text-wineBright text-xs font-bold uppercase tracking-wider relative z-10">
                 <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Vítejte na jižní Moravě
@@ -112,7 +115,7 @@
             </div>
         </section>
 
-        <!-- Featured Rooms Preview (obrázky z lokální složky images/) -->
+        <!-- Featured Rooms Preview -->
         <section class="space-y-6">
             <div class="flex items-center justify-between">
                 <div>
@@ -154,13 +157,11 @@
                 </div>
             </div>
         </section>
-                    
     </main>
 
-    <!-- ZÁPATÍ (Nové rozsáhlé footer podle předlohy) -->
+    <!-- ZÁPATÍ -->
     <footer class="border-t border-wineBorder bg-wineCard/50 mt-16 pt-12 pb-8">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <!-- O Penzionu -->
             <div class="space-y-4">
                 <div class="flex items-center space-x-2 text-wineBright">
                     <i data-lucide="wine" class="w-6 h-6"></i>
@@ -170,8 +171,6 @@
                     Rodinné ubytování v malebném prostředí jižní Moravy s vlastním vinným sklípkem a atmosférou klidu.
                 </p>
             </div>
-
-            <!-- Rychlé odkazy -->
             <div class="space-y-3">
                 <h4 class="text-sm font-bold text-cream uppercase tracking-wider">Rychlé odkazy</h4>
                 <ul class="space-y-2 text-xs text-gray-400">
@@ -181,8 +180,6 @@
                     <li><a href="vylety.html" class="hover:text-wineBright transition">Tipy na výlety</a></li>
                 </ul>
             </div>
-
-            <!-- Kontakt -->
             <div class="space-y-3">
                 <h4 class="text-sm font-bold text-cream uppercase tracking-wider">Kontakt</h4>
                 <ul class="space-y-2 text-xs text-gray-400">
@@ -191,8 +188,6 @@
                     <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-wineBright"></i> info@penzionpavluvky.cz</li>
                 </ul>
             </div>
-
-            <!-- Rezervace -->
             <div class="space-y-4">
                 <h4 class="text-sm font-bold text-cream uppercase tracking-wider">Rezervace & Dotazy</h4>
                 <p class="text-xs text-gray-400">Těšíme se na vaši návštěvu. Rezervujte si svůj termín včas.</p>
@@ -212,6 +207,12 @@
         </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        lucide.createIcons();
+    </script>
 </body>
 </html>
