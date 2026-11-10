@@ -104,68 +104,26 @@
     </main>
 
     <!-- ZÁPATÍ -->
-    <footer class="border-t border-wineBorder bg-wineCard/50 mt-16 pt-12 pb-8">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div class="space-y-4">
-                <div class="flex items-center space-x-2 text-wineBright">
-                    <i data-lucide="wine" class="w-6 h-6"></i>
-                    <span class="text-xl font-bold text-cream">Penzion Pavlůvky</span>
-                </div>
-                <p class="text-xs text-gray-400 leading-relaxed">
-                    Rodinné ubytování v malebném prostředí jižní Moravy s vlastním vinným sklípkem a atmosférou klidu.
-                </p>
-            </div>
-            <div class="space-y-3">
-                <h4 class="text-sm font-bold text-cream uppercase tracking-wider">Rychlé odkazy</h4>
-                <ul class="space-y-2 text-xs text-gray-400">
-                    <li><a href="onas.html" class="hover:text-wineBright transition">O nás & Vinařství</a></li>
-                    <li><a href="pokoje.html" class="hover:text-wineBright transition">Pokoje & Ceník</a></li>
-                    <li><a href="sluzby.html" class="hover:text-wineBright transition">Služby & Vybavení</a></li>
-                    <li><a href="vylety.html" class="hover:text-wineBright transition">Tipy na výlety</a></li>
-                </ul>
-            </div>
-            <div class="space-y-3">
-                <h4 class="text-sm font-bold text-cream uppercase tracking-wider">Kontakt</h4>
-                <ul class="space-y-2 text-xs text-gray-400">
-                    <li class="flex items-center gap-2">
-                        <i data-lucide="map-pin" class="w-4 h-4 text-wineBright"></i> 
-                        <span id="adresa-text">Načítám...</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <i data-lucide="phone" class="w-4 h-4 text-wineBright"></i> 
-                        <a href="" id="tel-link" class="hover:text-white transition"><span id="tel-text">Načítám...</span></a>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <i data-lucide="mail" class="w-4 h-4 text-wineBright"></i> 
-                        <a href="" id="email-link" class="hover:text-white transition"><span id="email-text">Načítám...</span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="space-y-4">
-                <h4 class="text-sm font-bold text-cream uppercase tracking-wider">Rezervace & Dotazy</h4>
-                <p class="text-xs text-gray-400">Těšíme se na vaši návštěvu. Rezervujte si svůj termín včas.</p>
-                <a href="rezervace.html" class="block w-full py-3 bg-wineBright text-white font-bold text-center rounded-xl text-xs hover:bg-wineHover transition shadow-lg shadow-wineBright/20">
-                    Rezervovat pobyt
-                </a>
-            </div>
+<footer class="border-t border-wineBorder bg-wineCard/50 mt-16 pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-4"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-wineBorder/50 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p>&copy; 2026 Penzion Pavlůvky. Všechna práva vyhrazena.</p>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:text-gray-400 transition">Ochrana osobních údajů</a>
+            <span>&bull;</span>
+            <a href="#" class="hover:text-gray-400 transition">Storno podmínky</a>
         </div>
+    </div>
+</footer>
 
-        <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-wineBorder/50 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-            <p>&copy; 2026 Penzion Pavlůvky. Všechna práva vyhrazena.</p>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-gray-400 transition">Ochrana osobních údajů</a>
-                <span>&bull;</span>
-                <a href="#" class="hover:text-gray-400 transition">Storno podmínky</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-        lucide.createIcons();
-    </script>
+<script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    }
+    lucide.createIcons();
+</script>
 </body>
 </html>
