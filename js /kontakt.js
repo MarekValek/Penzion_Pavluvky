@@ -5,13 +5,20 @@ const penzionInfo = {
     instagram: "https://instagram.com/penzionpavluvky"
 };
 
-// Funkce, která údaje automaticky vyplní do stránek, kde mají určitá ID
 window.addEventListener('DOMContentLoaded', () => {
-    if(document.getElementById('tel-text')) document.getElementById('tel-text').innerText = penzionInfo.telefon;
-    if(document.getElementById('tel-link')) document.getElementById('tel-link').href = "tel:" + penzionInfo.telefon.replace(/\s+/g, '');
-    
-    if(document.getElementById('email-text')) document.getElementById('email-text').innerText = penzionInfo.email;
-    if(document.getElementById('email-link')) document.getElementById('email-link').href = "mailto:" + penzionInfo.email;
-    
-    if(document.getElementById('adresa-text')) document.getElementById('adresa-text').innerText = penzionInfo.adresa;
+    // Adresa
+    const adresaEl = document.getElementById('adresa-text');
+    if (adresaEl) adresaEl.innerText = penzionInfo.adresa;
+
+    // Telefon
+    const telTextEl = document.getElementById('tel-text');
+    const telLinkEl = document.getElementById('tel-link');
+    if (telTextEl) telTextEl.innerText = penzionInfo.telefon;
+    if (telLinkEl) telLinkEl.href = "tel:" + penzionInfo.telefon.replace(/\s+/g, '');
+
+    // E-mail
+    const emailTextEl = document.getElementById('email-text');
+    const emailLinkEl = document.getElementById('email-link');
+    if (emailTextEl) emailTextEl.innerText = penzionInfo.email;
+    if (emailLinkEl) emailLinkEl.href = "mailto:" + penzionInfo.email;
 });
