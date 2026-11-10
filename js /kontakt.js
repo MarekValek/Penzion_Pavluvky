@@ -5,7 +5,7 @@ const penzionInfo = {
     instagram: "https://instagram.com/penzionpavluvky"
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+function nactikontakty() {
     // Adresa
     const adresaEl = document.getElementById('adresa-text');
     if (adresaEl) adresaEl.innerText = penzionInfo.adresa;
@@ -21,4 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const emailLinkEl = document.getElementById('email-link');
     if (emailTextEl) emailTextEl.innerText = penzionInfo.email;
     if (emailLinkEl) emailLinkEl.href = "mailto:" + penzionInfo.email;
-});
+}
+
+// Spustí se okamžitě bez čekání na událost
+nactikontakty();
